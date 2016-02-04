@@ -808,9 +808,6 @@ select {
   background-color: #fff;
   z-index: 10;
 }
-.ba-team__photo {
-  text-align: center;
-}
 .ba-team__img-wrap {
   display: inline-block;
   font-size: 0;
@@ -848,17 +845,10 @@ select {
   z-index: 10;
 }
 .ba-team__profile-wrap {
-  border-top: 1px solid #ffcc00;
-  margin-top: 60px;
-}
-@media (min-width:960px) {
-  .ba-team__profile-wrap {
-    border-left: 1px solid #ffcc00;
-    border-top: none;
-  }
+  border-left: 1px solid #ffcc00;
 }
 .ba-team__profile {
-  padding: 20px 0 75px;
+  padding: 45px 0 75px 80px;
   text-align: center;
 }
 .ba-team__profile h2 a {
@@ -868,11 +858,6 @@ select {
 }
 .ba-team__profile h2 a:hover {
   color: #ffcc00;
-}
-@media (min-width:960px) {
-  .ba-team__profile {
-    padding: 45px 0 75px 80px;
-  }
 }
 .ba-team__position {
   color: #666666;
@@ -1018,19 +1003,20 @@ select {
 .ba-slider .slick-arrow {
   position: absolute;
   z-index: 20;
-  top: 50%;
+  bottom: 100px;
   width: 23px;
   height: 23px;
   border: none;
   background: no-repeat 50%;
   text-indent: -99999px;
+  background-color: black;
   background-size: contain;
   border-radius: 50%;
   outline: none;
 }
 .ba-slider .slick-arrow:focus,
 .ba-slider .slick-arrow:active {
-  background-color: #fff5cc;
+  background-color: #ffffff;
 }
 .ba-slider .slick-prev {
   background-image: url(../img/angle-left.png);
@@ -1046,7 +1032,7 @@ select {
   margin: 0;
   padding: 0;
   list-style: none;
-  top: calc(105%);
+  top: calc(110%);
   right: calc(48%);
 }
 .ba-slider .slick-dots button {
