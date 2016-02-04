@@ -130,15 +130,15 @@ textarea {
 		background-size: contain;
 		background-color: #fff;
 		z-index: 10;
-
 	}
-
 }
-.ba-team {
 
+.ba-team {
+&__photo {
+	text-align: center;
+}
 	&__img-wrap {
 		display: inline-block;
-
 		font-size: 0;
 		margin-top: 75px;
 		padding: 14px;
@@ -146,7 +146,6 @@ textarea {
 		position: relative;
 		&:before, &:after {
 			content: "";
-
 			background: #FFF;
 			position: absolute;
 			display: block;
@@ -168,21 +167,25 @@ textarea {
 			top: -5px;
 		}
 	}
-
 	&__img {
 		border: 1px solid @primary-color;
 		position: relative;
 		z-index: 10;
+			@media @medium and (max-width:959px) {
 
-
-
+		}
 	}
 	&__profile-wrap {
-		border-left: 1px solid @primary-color;
+		border-top: 1px solid @primary-color;
+		margin-top: 60px;
+		@media @large {
+			border-left: 1px solid @primary-color;
+			border-top:none;
+		}
 
 	}
 	&__profile {
-		padding: 45px 0 75px 80px;
+		padding: 20px 0 75px;
 		text-align: center;
 		h2 a {
 			color:inherit;
@@ -191,6 +194,9 @@ textarea {
 			&:hover {
 				color:@primary-color;
 			}
+		}
+		@media @large {
+			padding: 45px 0 75px 80px;
 		}
 	}
 	&__position {
@@ -266,18 +272,17 @@ textarea {
 	.slick-arrow {
 		position: absolute;
 		z-index: 20;
-		bottom: 100px;
+		top: 50%;
 		width: 23px;
 		height: 23px;
 		border: none;
 		background: no-repeat 50%;
 		text-indent: -99999px;
-		background-color: black;
 		background-size: contain;
 		border-radius: 50%;
 		outline: none;
 		&:focus, &:active {
-			background-color: lighten(@primary-color, 50%);
+			background-color: lighten(@primary-color, 40%);
 		}
 	}
 	.slick-prev {
@@ -294,7 +299,7 @@ textarea {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		top: calc(100% + 10px);
+		top: calc(100% + 5px);
 		right: calc(50% - 2px);
 		button {
 			width: 10px;
