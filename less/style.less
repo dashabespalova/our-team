@@ -26,9 +26,12 @@ h1, h2 {
 	font-weight:700;
 }
 h1 {
-	font-size: 60px;
+	font-size: 40px;
 	color: @primary-color;
 	text-transform: uppercase;
+	@media @small {
+		font-size: 60px;
+	}
 }
 h2 {
 	font-size: 36px;
@@ -99,7 +102,10 @@ textarea {
 	max-width: 1140px;
 }
 .ba-wrapper {
-	padding: 100px 0 100px;
+	padding: 50px 0 50px;
+	@media @small {
+		padding: 100px 0 100px;
+	}
 }
 .ba-header {
 	max-width: 452px;
@@ -140,7 +146,7 @@ textarea {
 	&__img-wrap {
 		display: inline-block;
 		font-size: 0;
-		margin-top: 75px;
+		margin-top:30px;
 		padding: 14px;
 		border: 1px solid @primary-color;
 		position: relative;
@@ -165,6 +171,9 @@ textarea {
 			width: 50%;
 			height:calc(100% + 5px);
 			top: -5px;
+		}
+		@media @small {
+			margin-top: 75px;
 		}
 	}
 	&__img {
@@ -213,6 +222,10 @@ textarea {
 		&:hover {
 			background-color: lighten(@primary-color, 40%);
 		}
+		&:focus {
+			outline:none;
+		}
+
 
 		&--fb {
 			background: url(../img/facebook.png) no-repeat;
@@ -264,6 +277,7 @@ textarea {
 @import "slick.less";
 
 .ba-slider {
+	text-align: center;
 	.ba-slide {
 		min-height: 100vh;
 		border: none;
@@ -272,17 +286,31 @@ textarea {
 	.slick-arrow {
 		position: absolute;
 		z-index: 20;
-		top: 50%;
-		width: 23px;
-		height: 23px;
+		top: 35%;
+		width: 30px;
+		height: 30px;
 		border: none;
 		background: no-repeat 50%;
 		text-indent: -99999px;
 		background-size: contain;
 		border-radius: 50%;
 		outline: none;
-		&:focus, &:active {
+		&:focus, &:active, &:hover {
 			background-color: lighten(@primary-color, 40%);
+
+			border: 2px solid lighten(@secondary-color,40%);
+		}
+		@media (min-width:380px) {
+			top: 40%;
+		}
+		@media (min-width:450px) {
+			top: 45%;
+		}
+		@media (min-width:500px) {
+			top: 48%;
+		}
+		@media @medium {
+			top: 40%;
 		}
 	}
 	.slick-prev {
@@ -294,13 +322,10 @@ textarea {
 		right: 30px;
 	}
 	.slick-dots {
-		position: absolute;
 		z-index: 2;
-		margin: 0;
-		padding: 0;
 		list-style: none;
-		top: calc(100% + 5px);
-		right: calc(50% - 2px);
+		padding: 0;
+		top: calc(100%);
 		button {
 			width: 10px;
 			height: 10px;
@@ -329,6 +354,9 @@ textarea {
 		li {
 			display: inline-block;
 			margin-left: 10px;
+		}
+		li:first-of-type {
+			margin-left: 0;
 		}
 	}
 }

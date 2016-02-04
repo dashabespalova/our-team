@@ -717,9 +717,14 @@ h2 {
   font-weight: 700;
 }
 h1 {
-  font-size: 60px;
+  font-size: 40px;
   color: #ffcc00;
   text-transform: uppercase;
+}
+@media (min-width:480px) {
+  h1 {
+    font-size: 60px;
+  }
 }
 h2 {
   font-size: 36px;
@@ -775,7 +780,12 @@ select {
   max-width: 1140px;
 }
 .ba-wrapper {
-  padding: 100px 0 100px;
+  padding: 50px 0 50px;
+}
+@media (min-width:480px) {
+  .ba-wrapper {
+    padding: 100px 0 100px;
+  }
 }
 .ba-header {
   max-width: 452px;
@@ -814,7 +824,7 @@ select {
 .ba-team__img-wrap {
   display: inline-block;
   font-size: 0;
-  margin-top: 75px;
+  margin-top: 30px;
   padding: 14px;
   border: 1px solid #ffcc00;
   position: relative;
@@ -841,6 +851,11 @@ select {
   width: 50%;
   height: calc(105%);
   top: -5px;
+}
+@media (min-width:480px) {
+  .ba-team__img-wrap {
+    margin-top: 75px;
+  }
 }
 .ba-team__img {
   border: 1px solid #ffcc00;
@@ -888,6 +903,9 @@ select {
 }
 .ba-team__icon:hover {
   background-color: #fff5cc;
+}
+.ba-team__icon:focus {
+  outline: none;
 }
 .ba-team__icon--fb {
   background: url(../img/facebook.png) no-repeat;
@@ -1010,6 +1028,9 @@ select {
 .slick-arrow.slick-hidden {
   display: none;
 }
+.ba-slider {
+  text-align: center;
+}
 .ba-slider .ba-slide {
   min-height: 100vh;
   border: none;
@@ -1018,9 +1039,9 @@ select {
 .ba-slider .slick-arrow {
   position: absolute;
   z-index: 20;
-  top: 50%;
-  width: 23px;
-  height: 23px;
+  top: 35%;
+  width: 30px;
+  height: 30px;
   border: none;
   background: no-repeat 50%;
   text-indent: -99999px;
@@ -1029,8 +1050,30 @@ select {
   outline: none;
 }
 .ba-slider .slick-arrow:focus,
-.ba-slider .slick-arrow:active {
+.ba-slider .slick-arrow:active,
+.ba-slider .slick-arrow:hover {
   background-color: #fff5cc;
+  border: 2px solid #cccccc;
+}
+@media (min-width: 380px) {
+  .ba-slider .slick-arrow {
+    top: 40%;
+  }
+}
+@media (min-width: 450px) {
+  .ba-slider .slick-arrow {
+    top: 45%;
+  }
+}
+@media (min-width: 500px) {
+  .ba-slider .slick-arrow {
+    top: 48%;
+  }
+}
+@media (min-width:768px) {
+  .ba-slider .slick-arrow {
+    top: 40%;
+  }
 }
 .ba-slider .slick-prev {
   background-image: url(../img/angle-left.png);
@@ -1041,13 +1084,10 @@ select {
   right: 30px;
 }
 .ba-slider .slick-dots {
-  position: absolute;
   z-index: 2;
-  margin: 0;
-  padding: 0;
   list-style: none;
-  top: calc(105%);
-  right: calc(48%);
+  padding: 0;
+  top: calc(100%);
 }
 .ba-slider .slick-dots button {
   width: 10px;
@@ -1076,6 +1116,9 @@ select {
 .ba-slider .slick-dots li {
   display: inline-block;
   margin-left: 10px;
+}
+.ba-slider .slick-dots li:first-of-type {
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
